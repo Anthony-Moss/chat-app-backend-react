@@ -8,13 +8,13 @@ const db = [
 ];
 // When GET request comes in,
 // send back all the messages
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
     res.json(db);
 });
 
 // When POST request comes in,
 // add new message to databass
-app.post('/', (req, res) => {
+app.post('/api', (req, res) => {
     console.log(req.body.message);
     db.push(req.body.message);
     res.json({
